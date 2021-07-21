@@ -15,7 +15,7 @@ public class DialoguetriggerController : MonoBehaviour
 			
 			thisDialogue.transform.parent = dialogueCanvas.transform;
 			thisDialogue.transform.localPosition = new Vector3(0,0,0);
-			playerCol.gameObject.GetComponent<PlayerController2>().movementIsBlocked = false;
+			playerCol.gameObject.GetComponent<PlayerController2>().movementIsBlocked = true;
 				
 		}
 	}

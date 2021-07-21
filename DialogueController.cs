@@ -19,15 +19,11 @@ public class DialogueController : MonoBehaviour
         uiText = gameObject.GetComponent<Text>(); 
 	}
 	
-	// FIXME Doesnt shows first line.
-	//		LOGIC FOR GAME:
-	//			IF TRIGGER THEN NEW DIALOGUE OBJECT WITH dialogue.txt AS FILENAME
-	//
-	int messageShowingNumber = 0;
+	int messageShowingNumber = -1; // The flow of the program requires it to start at -1
 	[HideInInspector] public bool lastMessageHasBeenShown = true;
 	void Update(){
 
-		if(lastMessageHasBeenShown && Input.GetMouseButtonDown(0))
+		if((lastMessageHasBeenShown && Input.GetMouseButtonDown(0))|| messageShowingNumber == -1)
 		{
 			lastMessageHasBeenShown = false;
 			messageShowingNumber ++;
