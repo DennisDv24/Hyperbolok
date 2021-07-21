@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialoguetriggerController : MonoBehaviour
+public class DialogueTriggerControllerOld : MonoBehaviour
 {
 	
 	public GameObject dialogueToAdd;
