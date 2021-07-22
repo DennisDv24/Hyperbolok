@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
 {
     public float mouseSpeed = 200f;
 
-
     void Start()
     {        
         Cursor.lockState = CursorLockMode.Locked;
