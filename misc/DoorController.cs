@@ -9,12 +9,12 @@ public class DoorController : MonoBehaviour
 	public ShakePreset shakerPreset;
 
 	Animator doorAnimator;	
-	void Start()
+	void OnEnable()
 	{
 		doorAnimator = GetComponent<Animator>();
 	}
 
-	void OnTriggerStay(Collider playerCol)
+	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.E))
 		{
@@ -30,10 +30,9 @@ public class DoorController : MonoBehaviour
 		
 	}
 
-	void OnTriggerExit(Collider playerCol)
+	void OnDisable()
 	{
-		if(playerCol.tag == "Player")	
-			doorAnimator.SetBool("UsingDoor", false);
+		doorAnimator.SetBool("UsingDoor", false);
 	}
 
 

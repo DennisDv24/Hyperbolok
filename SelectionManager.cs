@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelectionManager : MonoBehaviour
 {
 	public Camera playerCamera;
-	//[HideInInspector] 
+	[HideInInspector] 
 	public GameObject objPlayerIsLookingAt;
 
 		// To make raycasts ignore triggers go to
